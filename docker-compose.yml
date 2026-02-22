@@ -5,7 +5,7 @@ services:
     build:
       context: .
       dockerfile: docker/Dockerfile
-    container_name: php_app
+    container_name: php_app_taskflow
     ports:
       - "8080:80"
       - "8443:443"
@@ -16,7 +16,7 @@ services:
 
   db:
     image: mysql:8.0
-    container_name: mysql_db
+    container_name: mysql_db_taskflow
     environment:
       MYSQL_ROOT_PASSWORD: root
       MYSQL_DATABASE: taskflow
@@ -28,7 +28,7 @@ services:
 
   phpmyadmin:
     image: phpmyadmin/phpmyadmin:latest
-    container_name: phpmyadmin
+    container_name: phpmyadmin_taskflow
     environment:
       PMA_HOST: db
       PMA_PORT: 3306
