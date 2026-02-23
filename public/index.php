@@ -2,6 +2,8 @@
 
 require_once __DIR__ . '/../app/core/autoload.php';
 require_once __DIR__ . '/../app/core/SessionManager.php';
+require_once __DIR__ . '/../app/libs/bGeneral.php';
+require_once __DIR__ . '/../app/libs/Config.php';
 
 $session = new SessionManager(900);
 
@@ -20,7 +22,7 @@ $map = [
 
     'login' => [
         'controller' => 'AuthController',
-        'action'     => 'renderLogin',
+        'action'     => 'index',
         'nivel'      => 0
     ],
 
@@ -38,13 +40,13 @@ $map = [
 
     'register' => [
         'controller' => 'AuthController',
-        'action'     => 'renderRegister',
+        'action'     => 'register',
         'nivel'      => 0
     ],
-    
+
     'register_post' => [
         'controller' => 'AuthController',
-        'action'     => 'register',
+        'action'     => 'createUser',
         'nivel'      => 0
     ],
 

@@ -3,7 +3,15 @@
     <p>Organiza tus ideas, proyectos y tareas de forma visual y rápida.</p>
     <div class="login_form">
         <p>Regístrate para crear tu tablero personalizado.</p>
-        
+
+       <?php if (!empty($errores)): ?>
+    <div class="error">
+        <?php foreach ($errores as $error): ?>
+            <p><?= $error ?></p>
+        <?php endforeach; ?>
+    </div>
+<?php endif; ?>
+
         <form action="/register_post" method="POST">
             <input type="text" name="username" placeholder="Nombre de usuario" required>
             <input type="email" name="email" placeholder="Correo electrónico" required>

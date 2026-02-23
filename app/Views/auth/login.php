@@ -4,6 +4,14 @@
 
     <div class="login_form">
         <p>Inicia sesión para acceder a tu tablero personalizado.</p>
+    
+         <?php if (!empty($errores)): ?>
+    <div class="error">
+        <?php foreach ($errores as $error): ?>
+            <p><?= $error ?></p>
+        <?php endforeach; ?>
+    </div>
+<?php endif; ?>
 
         <form action="/login_post" method="POST">
             <input type="text" name="username" placeholder="Nombre de usuario" required>
