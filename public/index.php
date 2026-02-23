@@ -20,7 +20,7 @@ $map = [
 
     'login' => [
         'controller' => 'AuthController',
-        'action'     => 'index',
+        'action'     => 'renderLogin',
         'nivel'      => 0
     ],
 
@@ -34,6 +34,18 @@ $map = [
         'controller' => 'AuthController',
         'action'     => 'logout',
         'nivel'      => 1
+    ],
+
+    'register' => [
+        'controller' => 'AuthController',
+        'action'     => 'renderRegister',
+        'nivel'      => 0
+    ],
+    
+    'register_post' => [
+        'controller' => 'AuthController',
+        'action'     => 'register',
+        'nivel'      => 0
     ],
 
 ];
